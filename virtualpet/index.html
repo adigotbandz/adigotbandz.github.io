@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Virtual Pet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="gameLoop()" onkeydown="moveDragon(event)" onkeyup="">
+    <div class="live-box">
+      <div class="live-dot"></div>
+      <p class="live-message">LIVE</p>
+    </div>
+    <h2 class="heading">Pet Adoption Zone</h2>
+    <p class="subheading">
+      Play with & care for your Dragon Nest Defence pet here!
+    </p>
+    <div class="grid">
+      <div class="sky"></div>
+      <img
+        class="cave"
+        src="./graphics/cave.png"
+        alt="cave"
+        style="left: 0vh; right: 0vh; top: 63vh"
+      />
+      <div class="dragon-box">
+        <img
+          class="dragon"
+          src="./graphics/1 2.png"
+          alt="teal-dragon"
+          style="left: 0vh; right: 0vh; transform: scaleX(1); top: 62vh"
+        />
+      </div>
+      <div class="land"></div>
+    </div>
+    <div class="item-box">
+      <div class="item" id="food" onclick="addFood()">
+        <h3 class="item-text" id="food-text">food</h3>
+        <div class="box">
+          <div class="food-bar" style="width: 2vw"></div>
+        </div>
+      </div>
+      <div class="item" id="nest" onclick="addNest()">
+        <h3 class="item-text" id="nest-text">nest</h3>
+        <div class="box">
+          <div class="nest-bar" style="width: 2vw"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
